@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>How to Automate Tests using TestLink and Hudson</title>
+
+  <meta name="description" content="How to Automate Tests using TestLink and Hudson">
+  <meta name="author" content="Bruno P. Kinoshita">
+
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/reveal.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]> <script src="lib/js/html5shiv.js"></script> <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h3>How to Automate Tests using TestLink and Hudson</h3>
+        <p>Bruno P. Kinoshita<br/><small><a href="https://kinoshita.eti.br">https://kinoshita.eti.br</a> &mdash; <a href="https://github.com/kinow/">https://github.com/kinow</a></small></p>
+        <p style="font-size: 60%"><a href="http://nesi-cri.nz/">Belgium Testing Days</a><br/>
+         Brussels, Belgium 2011</p>
+       </section>
+       <section>
+        <h3>About the author</h3>
+        <ul>
+          <li>Bruno P. Kinoshita, Brazilian, Software Quality Engineer.</li>
+          <li>Developed some software (corporate and oss).</li>
+          <li>Wrote some articles.</li>
+          <li>Got some certifications.</li>
+          <li>Currently writing his Master thesis.</li>
+          <li>http://kinoshita.eti.br</li>
+        </ul>
+        <br/>
+      </section>
+      <section>
+        <h3>Introducing the tools</h3>
+        <ul>
+          <li>TestLink – Open Source Test Management  tool (PHP) – http://www.teamst.org</li>
+          <li>Hudson – Open Source (?) Continuous Integration Server (Java) – http://www.hudson-ci.org</li>
+          <li>Jenkins – Open Source Continuous Integrationg Server (Java) – http://www.jenkins-ci.org</li>
+        </ul>
+      </section>
+      <section>
+        <img src="img/figure1.png" style="background-color: white">
+      </section>
+      <section>
+        <ul>
+          <li>Enable xml-rcp external API in TestLink</li>
+          <li>Generate a devkey</li>
+          <li>Install the plug-in</li>
+          <li>Configure the plug-in</li>
+          <li>Create and configure a job</li>
+          <li>Have fun!</li>
+        </ul>
+      </section>
+      <section>
+        <ul>
+          <li><h3>Pros</h3>
+            <ul>
+              <li>Easy integration with CI</li>
+              <li>No need to train users on a new Test Management tool</li>
+              <li>Keep using your existing automated tests</li>
+            </ul>
+          </li>
+          <li><h3>Cons</h3>
+            <ul>
+              <li>Works only with TestLink and Hudson</li>
+              <li>Better results if you are using TAP</li>
+              <li>Requires some technical knowledge</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>The objectives of this presentation</h3>
+        <ul>
+          <li>How to manage your automated tests with TestLink and Hudson?</li>
+          <li>What is TestLink Hudson Plug-in?</li>
+          <li>What is TAP?</li>
+          <li>What is the future of the plug-in?</li>
+          <li>What is "legal" (in pt-BR)?</li>
+        </ul>
+      </section>
+      <section>
+        <h3>VALEU!</h3>
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+              controls: false,
+              progress: true,
+              history: true,
+              center: true,
+              slideNumber: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        keyboard: true,
+        touch: true,
+        loop: false,
+        fragments: true,
+        dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+  </html>
